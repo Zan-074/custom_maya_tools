@@ -1,0 +1,21 @@
+About flower_generator.py
+
+Functionality:
+Allows the user to create procedural flower models in Maya. Users may customize the petal shape. The final generated model components will be automatically grouped together.
+
+Inputs:
+Center radius: The radius for the center of the flower.
+Center thickness ratio: How thick the flower center is in relation to the radius.
+Number of rings: How many "layers" of petals.
+Petals per ring: How many petals in a layer.
+Min and Max petal size: The minimum petal size is the scale of the petals on the innermost layer. The size will increment per layer until the maximum size on the outermost layer. If only one layer is created, minimum size will be taken into account. If min > max, the petals will decrease in size going outwards.
+
+Petal Shape Dropdown:
+Along with the .py file I have attached a sample .ma scene containing pre-made petal shapes. The Petal Shape dropdown menu can be used to pick on of these samples for the petal shape.
+
+Custom Petal Object:
+The user may choose to create their own petal shape for their flower. In this case, check the input box next to "Custom Petal Object" and type in the name of the petal shape you wish to use (case-sensitive).
+NOTE: this function works best if the pivot point of the petal is at the point where the petal would attach to the center, and that the transforms are frozen.
+
+Custom Group Name:
+The user may choose a different name for the model group. The default group name is "Flower"
