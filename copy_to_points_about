@@ -1,0 +1,16 @@
+About copy_to_points.py
+
+Functionality:
+A recreation of HoudiniFX's Copy to Points tool for Autodesk Maya. This tools allows the user to copy one object to all the vertices of a target object. For example, copying cones to the points of a sphere to create something like a mace, or scattering trees onto terrain. All copied objects will be added into a group that is parented under the target object.
+
+Inputs:
+Object to Copy: The object that will be copied.
+Target Object: The object to whose vertices the previous will be copied.
+Create Instances?: By default, this tool will create duplicates of the object to copy. By checking this option, instancing will be used instead. With this, the user can deform the base object and ay deformation will be applied to all the instances as well.
+Rotational Aim Vector: When objects are being copied, they will be rotated to match the normal direction of the vertex they are copied to. The aim vector dictates which axis will be pointing outwards in that normal direction. For example, a mace. Say we wish to copy a cone to the points of a sphere. If the cone is pointing upwards, the aim vector would be the Y axis. In the input boxes, type [0.0, 1.0, 0.0]. This way, the Y axis of the cone will be pointing outwards from the sphere.
+                       Inputing [0.0, 0.0, 0.0] will cause the copy object to not be rotated to match target normals.
+Rotation Jitter: Adds slight variations the the rotation of each copied object.
+Scale Jitter: Adds slight variations the the scale of each copied object.
+
+Custom Group Name:
+Checking this option allows the user to choose a different name for the group containing all copied objects. Default group name is "Copied_Objects"
